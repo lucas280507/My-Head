@@ -81,13 +81,107 @@
             </div>
         </section>
 
-        <!-- Container da Imagem Original -->
-        <section id="showcase" class="py-5">
-            <div class="container text-center">
-                <div class="animation-stage-wrapper mx-auto">
-                    <a href="./readme.html" title="Clique para ver o Readme">
-                        <img id="img" src="img/cabeca.jpg" alt="Cabeça Girando" class="head-avatar">
-                    </a>
+        <!-- Showcase & Painel de Controles GSAP -->
+        <section id="showcase" class="py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-9">
+                        <div class="stage-card">
+                            
+                            <!-- Header do Card -->
+                            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 pb-3 border-bottom border-secondary border-opacity-25">
+                                <div>
+                                    <h2 class="h4 fw-bold mb-0"><i class="bi bi-cpu text-neon me-2"></i> Laboratório de Animação GSAP</h2>
+                                    <small class="text-muted-custom">Controle interativo da rotação da cabeça em tempo real</small>
+                                </div>
+                                <div class="d-flex gap-2 flex-wrap" id="statusContainer">
+                                    <span id="statusState" class="badge bg-success-subtle text-success border border-success">Girando</span>
+                                    <span class="badge bg-dark border border-secondary">Vel: <strong id="statusSpeed" class="text-neon">1.0x</strong></span>
+                                    <span class="badge bg-dark border border-secondary">Dir: <strong id="statusDirection" class="text-info">Horário</strong></span>
+                                    <span class="badge bg-dark border border-secondary">FX: <strong id="statusFilter" class="text-warning">Normal</strong></span>
+                                </div>
+                            </div>
+
+                            <!-- Stage de Rotação -->
+                            <div class="py-4 my-2">
+                                <div class="animation-stage-wrapper mx-auto">
+                                    <div class="ring-glow"></div>
+                                    <a href="./readme.html" title="Clique para abrir o README em HTML">
+                                        <img id="img" src="img/cabeca.jpg" alt="Cabeça Girando" class="head-avatar">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Painel de Controles -->
+                            <div class="controls-panel mt-4 pt-3 border-top border-secondary border-opacity-25">
+                                <div class="row g-3">
+                                    <!-- Ações Principais -->
+                                    <div class="col-md-6">
+                                        <label class="form-label small text-muted-custom fw-semibold mb-2">
+                                            <i class="bi bi-controller me-1"></i> Ações de Movimento
+                                        </label>
+                                        <div class="d-flex gap-2 flex-wrap">
+                                            <button id="btnPlayPause" class="btn btn-glass flex-grow-1">
+                                                <i id="playIcon" class="bi bi-pause-fill me-1"></i>
+                                                <span id="playText">Pausar</span>
+                                            </button>
+                                            <button id="btnReverse" class="btn btn-glass flex-grow-1">
+                                                <i class="bi bi-arrow-repeat me-1"></i>
+                                                <span id="reverseText">Inverter</span>
+                                            </button>
+                                            <button id="btnReset" class="btn btn-outline-danger btn-sm px-3" title="Restaurar padrão">
+                                                <i class="bi bi-arrow-counterclockwise"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Controle de Velocidade -->
+                                    <div class="col-md-6">
+                                        <label class="form-label small text-muted-custom fw-semibold mb-2">
+                                            <i class="bi bi-speedometer2 me-1"></i> Multiplicador de Velocidade
+                                        </label>
+                                        <div class="d-flex gap-2 flex-wrap mb-2">
+                                            <button class="btn btn-glass btn-sm btn-speed" data-speed="0.5">0.5x</button>
+                                            <button class="btn btn-glass btn-sm btn-speed active" data-speed="1.0">1.0x</button>
+                                            <button class="btn btn-glass btn-sm btn-speed" data-speed="2.0">2.0x</button>
+                                            <button class="btn btn-glass btn-sm btn-speed" data-speed="4.0">4.0x Turbo</button>
+                                        </div>
+                                        <input type="range" class="form-range custom-range" id="speedSlider" min="0.2" max="5.0" step="0.1" value="1.0">
+                                    </div>
+
+                                    <!-- Efeitos Visuais (Filtros) -->
+                                    <div class="col-12 mt-3">
+                                        <label class="form-label small text-muted-custom fw-semibold mb-2">
+                                            <i class="bi bi-magic me-1"></i> Efeitos Visuais & Filtros CSS
+                                        </label>
+                                        <div class="d-flex gap-2 flex-wrap">
+                                            <button class="btn btn-glass btn-sm btn-filter active" data-filter="none" data-filter-name="Normal">
+                                                <i class="bi bi-circle me-1"></i> Normal
+                                            </button>
+                                            <button class="btn btn-glass btn-sm btn-filter" data-filter="filter-neon" data-filter-name="Neon Cyberpunk">
+                                                <i class="bi bi-lightning-charge me-1 text-neon"></i> Neon Cyber
+                                            </button>
+                                            <button class="btn btn-glass btn-sm btn-filter" data-filter="filter-sepia" data-filter-name="Vintage Sepia">
+                                                <i class="bi bi-camera me-1 text-warning"></i> Vintage
+                                            </button>
+                                            <button class="btn btn-glass btn-sm btn-filter" data-filter="filter-grayscale" data-filter-name="Preto & Branco">
+                                                <i class="bi bi-circle-half me-1"></i> P&B
+                                            </button>
+                                            <button class="btn btn-glass btn-sm btn-filter" data-filter="filter-invert" data-filter-name="Invertido">
+                                                <i class="bi bi-yin-yang me-1 text-info"></i> Invertido
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Atalhos de Teclado -->
+                                <div class="mt-4 pt-3 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center flex-wrap gap-2 text-muted-custom small">
+                                    <span><i class="bi bi-keyboard me-1"></i> <strong>Atalhos:</strong> <kbd>Espaço</kbd> Pausar/Play | <kbd>R</kbd> Inverter | <kbd>↑</kbd>/<kbd>↓</kbd> Velocidade</span>
+                                    <span>Engine: <strong>GSAP 3.12.5</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
