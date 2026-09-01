@@ -293,3 +293,33 @@ body {
 .filter-invert {
     filter: invert(0.9) hue-rotate(90deg) !important;
 }
+
+
+/* Tech badge card */
+.tech-badge-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+.tech-badge-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-neon);
+    box-shadow: 0 8px 25px rgba(0, 242, 254, 0.2);
+}
+
+.profile-avatar-icon {
+    font-size: 3.5rem;
+    display: inline-block;
+    filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.5));
+}
+
+.bg-dark-soft {
+    background-color: rgba(13, 18, 28, 0.6);
+}
+
+/* Custom slider */
+.custom-range::-webkit-slider-thumb {
+    background: var(--primary-neon);
+    box-shadow: 0 0 10px var(--primary-neon);
+}

@@ -43,6 +43,9 @@
                             <a class="nav-link" href="#sobre"><i class="bi bi-info-circle me-1"></i> Sobre o Projeto</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="#tecnologias"><i class="bi bi-code-slash me-1"></i> Tecnologias</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#contato"><i class="bi bi-person-lines-fill me-1"></i> Contato</a>
                         </li>
                         <li class="nav-item ms-lg-2">
@@ -185,7 +188,165 @@
                 </div>
             </div>
         </section>
+
+        <!-- Seção Sobre o Projeto & GitFlow -->
+        <section id="sobre" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge bg-primary-soft text-neon mb-2">Metodologia Profissional</span>
+                    <h2 class="h2 fw-bold">Arquitetura de Branching & GitFlow</h2>
+                    <p class="text-muted-custom mx-auto" style="max-width: 600px;">
+                        Ciclo de vida completo aplicado neste projeto para garantir integridade, revisão de código e deploy automatizado.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="glass-card">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="fs-2 text-primary"><i class="bi bi-shield-check"></i></span>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-0">Branch main</h3>
+                                    <small class="text-muted-custom">Produção & Estabilidade</small>
+                                </div>
+                            </div>
+                            <p class="text-muted-custom small mb-0">
+                                Representa o código em produção. Nenhuma alteração é enviada diretamente; apenas merges validados via Pull Request a partir da branch develop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="glass-card">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="fs-2 text-neon"><i class="bi bi-diagram-3"></i></span>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-0">Branch develop</h3>
+                                    <small class="text-muted-custom">Integração Contínua</small>
+                                </div>
+                            </div>
+                            <p class="text-muted-custom small mb-0">
+                                Branch central para consolidação e testes de novas funcionalidades antes de qualquer release para o ambiente final.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="glass-card">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <span class="fs-2 text-warning"><i class="bi bi-git"></i></span>
+                                <div>
+                                    <h3 class="h5 fw-bold mb-0">Feature Branches</h3>
+                                    <small class="text-muted-custom">Desenvolvimento Modular</small>
+                                </div>
+                            </div>
+                            <p class="text-muted-custom small mb-0">
+                                Branches isoladas (ex: <code>feature/personalizar-home</code>) criadas para desenvolver novas funcionalidades com commits semânticos e rastreáveis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Tecnologias -->
+        <section id="tecnologias" class="py-5 bg-dark-soft">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <span class="badge bg-primary-soft text-neon mb-2">Stack Tecnológica</span>
+                    <h2 class="h2 fw-bold">Tecnologias & Ferramentas</h2>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-badge-card text-center p-3">
+                            <i class="bi bi-filetype-html fs-1 text-danger mb-2"></i>
+                            <h4 class="h6 fw-bold mb-0">HTML5</h4>
+                            <small class="text-muted-custom">Semântico</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-badge-card text-center p-3">
+                            <i class="bi bi-filetype-css fs-1 text-info mb-2"></i>
+                            <h4 class="h6 fw-bold mb-0">CSS3</h4>
+                            <small class="text-muted-custom">Glassmorphism</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-badge-card text-center p-3">
+                            <i class="bi bi-filetype-js fs-1 text-warning mb-2"></i>
+                            <h4 class="h6 fw-bold mb-0">JavaScript</h4>
+                            <small class="text-muted-custom">ES6+ Engine</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-badge-card text-center p-3">
+                            <i class="bi bi-magic fs-1 text-neon mb-2"></i>
+                            <h4 class="h6 fw-bold mb-0">GSAP 3</h4>
+                            <small class="text-muted-custom">GreenSock</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-badge-card text-center p-3">
+                            <i class="bi bi-bootstrap-fill fs-1 text-primary mb-2"></i>
+                            <h4 class="h6 fw-bold mb-0">Bootstrap 5</h4>
+                            <small class="text-muted-custom">Grid & UI</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="tech-badge-card text-center p-3">
+                            <i class="bi bi-cloud-arrow-up fs-1 text-success mb-2"></i>
+                            <h4 class="h6 fw-bold mb-0">Pages</h4>
+                            <small class="text-muted-custom">GitHub CI/CD</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato / Perfil do Aluno -->
+        <section id="contato" class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="stage-card text-center">
+                            <div class="avatar-container mb-3 mx-auto">
+                                <span class="profile-avatar-icon">👨‍💻</span>
+                            </div>
+                            <h2 class="h3 fw-bold mb-1">Lucas</h2>
+                            <p class="text-neon fw-semibold mb-2">Estudante de Análise e Desenvolvimento de Sistemas / TI</p>
+                            <p class="text-muted-custom small mx-auto mb-4" style="max-width: 500px;">
+                                Desenvolvido para a disciplina de Projeto Integrador. Focado em boas práticas de versionamento de software, GitFlow, colaboração com Pull Requests e deploy ágil.
+                            </p>
+                            
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="https://github.com/lucas280507" target="_blank" rel="noopener noreferrer" class="btn btn-glass px-4 py-2 d-flex align-items-center gap-2">
+                                    <i class="bi bi-github fs-5 text-neon"></i>
+                                    <span>GitHub: <strong>@lucas280507</strong></span>
+                                </a>
+                                <a href="https://github.com/lucas280507/My-Head" target="_blank" rel="noopener noreferrer" class="btn btn-neon px-4 py-2 d-flex align-items-center gap-2">
+                                    <i class="bi bi-star-fill"></i>
+                                    <span>Star no Repositório</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer py-4 border-top border-secondary border-opacity-25 mt-5">
+        <div class="container text-center text-muted-custom small">
+            <p class="mb-1">
+                🌀 <strong>My-Head</strong> • Atividade de Projeto Integrador — GitFlow & GitHub Pages
+            </p>
+            <p class="mb-0">
+                Desenvolvido por <strong class="text-light">Lucas (@lucas280507)</strong> • Publicado via <a href="https://lucas280507.github.io/My-Head/" class="text-neon text-decoration-none">GitHub Pages</a>
+            </p>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
