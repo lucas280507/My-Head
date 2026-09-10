@@ -79,3 +79,28 @@ main (Produção / GitHub Pages)
 
 - **Lucas** — [@lucas280507](https://github.com/lucas280507)
 - Projeto Integrador • 2026
+
+
+---
+
+## 🚀 Deploy no GitHub Pages
+
+Este projeto utiliza o **GitHub Pages** para publicação automática.
+
+### Como foi configurado:
+
+1. No repositório do GitHub, acesse **Settings → Pages**
+2. Em **Build and deployment**, selecione:
+   - **Source**: Deploy from a branch
+   - **Branch**: `main`
+   - **Folder**: `/` (root)
+3. Salve as configurações
+
+### Como funciona:
+
+Toda vez que um commit ou merge entra na branch `main`, o GitHub Pages automaticamente:
+- Detecta a alteração
+- Reconstrói o site com os arquivos HTML, CSS e JS
+- Publica na URL: [https://lucas280507.github.io/My-Head/](https://lucas280507.github.io/My-Head/)
+
+> O deploy é **automático** e **gratuito** para repositórios públicos.
